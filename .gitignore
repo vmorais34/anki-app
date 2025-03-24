@@ -1,0 +1,7 @@
+AnkiApp/anki-app/.next/
+AnkiApp/anki-app/node_modules/
+AnkiApp/src/node_modules/
+AnkiApp/src/.vscode/
+AnkiApp/package-lock.json
+AnkiApp/src/package-lock.json
+AnkiApp/anki-app/package-lock.json
