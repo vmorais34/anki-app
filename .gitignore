@@ -5,4 +5,4 @@ src/.vscode/
 package-lock.json
 src/package-lock.json
 anki-app/package-lock.json
-anki-app/node_modules/
+node_modules/
