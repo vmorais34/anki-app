@@ -1,0 +1,24 @@
+{
+  "name": "anki-app",
+  "version": "1.0.0",
+  "description": "My first app full stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmorais34/anki-app.git"
+  },
+  "author": "Vinicius Morais",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/vmorais34/anki-app/issues"
+  },
+  "homepage": "https://github.com/vmorais34/anki-app#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.13.0"
+  }
+}
