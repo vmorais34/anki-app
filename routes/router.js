@@ -4,7 +4,7 @@ import express from "express";
 // Service do user para validar o login passando o userId
 // import doctorService from "../services/DoctorService.js";
 // import appointmentController from "./AppointmentController.js";
-// import doctorController from "./DoctorController.js";
+import userController from "./UserController.js";
 // import pacientController from "./PacientController.js";
 // import prescriptionController from "./PrescriptionController.js";
 
@@ -45,8 +45,8 @@ router.get(
 // });
 
 // Iniciamos os constrollers
+router.use("/", userController);
 // router.use("/", verifyToken, appointmentController);
-// router.use("/", verifyToken, doctorController);
 // router.use("/", verifyToken, pacientController);
 // router.use("/", verifyToken, prescriptionController);
 
