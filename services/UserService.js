@@ -21,17 +21,17 @@ const deleteUser = async (id) => {
 }
 
 // login
-// const getDoctorByLogin = async(login) => {
-//    return await DoctorRepository.getDoctorByLogin(login);
-// }
+const getUserByLogin = async(login) => {
+   return await UserRepository.getUserByLogin(login);
+}
 
 const userService = {
     getAllUsers,
     getUser,
     saveUser,
     updateUser,
-    deleteUser
-    // getUserByLogin
+    deleteUser,
+    getUserByLogin
 }
 
 export default userService;

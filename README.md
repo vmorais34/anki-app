@@ -20,12 +20,13 @@ FRONT-END: NextJS
  - [ ] Create project in mongo compass: anki-app
  - [x] initialize package.json
  - [x] connect in DB
+ - [ ] Login ready
  - [ ] install dependencies
   - [x] npm i express
   - [x] npm i mongoose
   - [x] npm i bcrypt
-  - [ ] npm i cors
-  - [ ] npm i jsonwebtoken
+  - [x] npm i jsonwebtoken
+  - [x] npm i cors
   - [ ] npm i path - optional
   - [ ] npm i process - to read files
   

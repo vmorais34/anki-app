@@ -43,13 +43,13 @@ const deleteUser = async (id) => {
 }
 
 // login
-// const getDoctorByLogin = async (login) => {
-//   try {
-//       return await Doctor.findOne({"login": login});
-//   } catch (error) {
-//       throw new Error(error);
-//   }
-// }
+const getUserByLogin = async (login) => {
+  try {
+      return await User.findOne({"login": login});
+  } catch (error) {
+      throw new Error(error);
+  }
+}
 
 
 const userRepository = {
@@ -58,7 +58,7 @@ const userRepository = {
   saveUser,
   updateUser,
   deleteUser,
-  // getUserByLogin
+  getUserByLogin
 }
 
 export default userRepository;
