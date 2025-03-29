@@ -5,7 +5,7 @@ import verifyToken from '../middleware/authMiddleware.js';
 import userService from "../services/UserService.js";
 // import appointmentController from "./AppointmentController.js";
 import userController from "./UserController.js";
-// import pacientController from "./PacientController.js";
+import languagesController from "./LanguagesController.js";
 // import prescriptionController from "./PrescriptionController.js";
 
 import jwt from 'jsonwebtoken';
@@ -46,8 +46,8 @@ router.post('/login', async (req,res) => {
 
 // Iniciamos os constrollers
 router.use("/", verifyToken, userController);
+router.use("/", verifyToken, languagesController);
 // router.use("/", verifyToken, appointmentController);
-// router.use("/", verifyToken, pacientController);
 // router.use("/", verifyToken, prescriptionController);
 
 export default router;

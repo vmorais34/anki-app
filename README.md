@@ -17,10 +17,10 @@ FRONT-END: NextJS
 [x] DER
 
 [ ] Create Back-End
- - [ ] Create project in mongo compass: anki-app
+ - [x] Create project in mongo compass: anki-app
  - [x] initialize package.json
  - [x] connect in DB
- - [ ] Login ready
+ - [x] Login ready
  - [ ] install dependencies
   - [x] npm i express
   - [x] npm i mongoose
@@ -35,7 +35,7 @@ FRONT-END: NextJS
   - [x] User
   - [ ] Anki
   - [ ] Cards
-  - [ ] Languages 
+  - [x] Languages 
 
 
 ### Fluxo correto
@@ -54,13 +54,13 @@ Observações:
 2. Para rodar o serviço: net start MongoDB
 3. Para parar o serviço: net stop MongoDB
 
-PostUser
+Exemple PostUser
   "name": "Vinicius Morais",
   "login": "vmorais",
   "password": "1234X",
   "email": "vmorais@gg.com"
 
-Response:
+Exemple Response:
   "name": "Vinicius Morais",
   "login": "vmorais",
   "password": "$2b$10$h2l0janPYq8aupUhJD8oC.FFJsBwo6Dlaol67YB0EL6iOdbTzPzpW",
@@ -68,3 +68,5 @@ Response:
   "_id": "67e3f6990e2fb4c9fa9d76da",
   "createdAt": "2025-03-26T12:44:09.996Z",
   "__v": 0
+
+/login - Generates a token, this token is the solicited in the function verifiyToken from the middleware; And used in Postman calls 
