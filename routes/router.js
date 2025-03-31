@@ -3,7 +3,7 @@ import express from "express";
 import verifyToken from '../middleware/authMiddleware.js';
 // Service do user para validar o login passando o userId
 import userService from "../services/UserService.js";
-// import appointmentController from "./AppointmentController.js";
+import ankiController from "./AnkiController.js";
 import userController from "./UserController.js";
 import languagesController from "./LanguagesController.js";
 // import prescriptionController from "./PrescriptionController.js";
@@ -47,7 +47,7 @@ router.post('/login', async (req,res) => {
 // Iniciamos os constrollers
 router.use("/", verifyToken, userController);
 router.use("/", verifyToken, languagesController);
-// router.use("/", verifyToken, appointmentController);
+router.use("/", verifyToken, ankiController);
 // router.use("/", verifyToken, prescriptionController);
 
 export default router;
