@@ -6,7 +6,7 @@ import userService from "../services/UserService.js";
 import ankiController from "./AnkiController.js";
 import userController from "./UserController.js";
 import languagesController from "./LanguagesController.js";
-// import prescriptionController from "./PrescriptionController.js";
+import cardController from "./CardController.js";
 
 import jwt from 'jsonwebtoken';
 
@@ -48,6 +48,6 @@ router.post('/login', async (req,res) => {
 router.use("/", verifyToken, userController);
 router.use("/", verifyToken, languagesController);
 router.use("/", verifyToken, ankiController);
-// router.use("/", verifyToken, prescriptionController);
+router.use("/", verifyToken, cardController);
 
 export default router;
