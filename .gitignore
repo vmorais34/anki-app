@@ -1,8 +1,8 @@
-anki-app/.next/
-anki-app/node_modules/
+ankiapp/.next/
+ankiapp/node_modules/
 src/node_modules/
 src/.vscode/
 package-lock.json
 src/package-lock.json
-anki-app/package-lock.json
+ankiapp/package-lock.json
 node_modules/

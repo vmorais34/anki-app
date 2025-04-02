@@ -14,9 +14,9 @@ FRONT-END: NextJS
 
 ## To-do
 
-[x] DER
+- [x] DER
 
-[x] Create Back-End
+- [x] Create Back-End
  - [x] Create project in mongo compass: anki-app
  - [x] initialize package.json
  - [x] connect in DB
@@ -29,7 +29,6 @@ FRONT-END: NextJS
   - [x] npm i cors
   - [ ] npm i path - optional
   - [ ] npm i process - to read files
-  - [ ] npm i next
   
 
  - [x]  models, repositories, services, controllers
@@ -37,14 +36,22 @@ FRONT-END: NextJS
   - [x] Anki
   - [x] Cards
   - [x] Languages 
-  - [ ] route for files
+  - [ ] route for files csv
 
 [ ] Create front-End
- - [ ] Initialize project
- - [ ] separate folders
- - [ ] create home
- - [ ] Create login
+ - [x] separate folders
+ - [x] npm init 
+ - [x] npm i next
+ - [x] Create basic front-end
+ - [x] create home
+ - [x] Create login
+ - [ ] dark mode in navigation 
+  - https://tailwindcss.com/docs/dark-mode
+ - [ ] Route for user
+ - [ ] Route for anki
+ - [ ] Route for card
 
+ 
 ### Fluxo correto
 
 A sequência correta para a implementação das operações de CRUD na aplicação é Repositório > Serviço > Controlador
