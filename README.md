@@ -16,7 +16,7 @@ FRONT-END: NextJS
 
 [x] DER
 
-[ ] Create Back-End
+[x] Create Back-End
  - [x] Create project in mongo compass: anki-app
  - [x] initialize package.json
  - [x] connect in DB
@@ -29,14 +29,21 @@ FRONT-END: NextJS
   - [x] npm i cors
   - [ ] npm i path - optional
   - [ ] npm i process - to read files
+  - [ ] npm i next
   
 
- - [ ]  models, repositories, services, controllers
+ - [x]  models, repositories, services, controllers
   - [x] User
-  - [ ] Anki
-  - [ ] Cards
+  - [x] Anki
+  - [x] Cards
   - [x] Languages 
+  - [ ] route for files
 
+[ ] Create front-End
+ - [ ] Initialize project
+ - [ ] separate folders
+ - [ ] create home
+ - [ ] Create login
 
 ### Fluxo correto
 
