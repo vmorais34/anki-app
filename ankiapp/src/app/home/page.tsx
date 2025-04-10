@@ -25,7 +25,7 @@ export default function Home(){
                 <br></br><br></br>
             </div>
 
-            <div>
+            {/* <div>
                 <h2>
                     Design System of my Application
                 </h2>
@@ -48,7 +48,7 @@ export default function Home(){
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> */}
         </div>
         </>
     );
