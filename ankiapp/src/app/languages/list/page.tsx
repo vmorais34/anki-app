@@ -7,14 +7,16 @@ export default function LanguagueList() {
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        fetch('http://127.0.0.1:3001/languages', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': sessionStorage.getItem("token") || ''
-            },
-        }).then(response => response.json())
-        .then(data => setLanguages(data))
+        if(languages?.length == 0){
+            fetch('http://127.0.0.1:3001/languages', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': sessionStorage.getItem("token") || ''
+                },
+            }).then(response => response.json())
+            .then(data => setLanguages(data))
+        }
     }, [languages]);
 
     const deleteLanguage = async (id: any) => {
@@ -37,7 +39,7 @@ export default function LanguagueList() {
     return (
         <>
             <div className='w-full text-center px-4'>
-                <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/home">Back</Link>
+                <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/home">Voltar</Link>
                 <table>
                     <thead>
                         <tr>

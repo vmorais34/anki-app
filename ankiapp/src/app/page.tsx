@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <div className='w-full text-center py-4 px-4 dark:bg-gray-900'>
-      <form className='w-full' onSubmit={authentication}>
+      <form className='w-full container mx-auto' onSubmit={authentication}>
         <span className='font-bold py-2 block text-2xl text-gray-900  dark:text-white'>Login</span>
         <div className='w-full py-2'>
           <label htmlFor="" className='text-sm font-bold py-2 block dark:text-white'>Usuário</label>

@@ -48,7 +48,7 @@ export default function LanguageCreate() {
     return (
       <>
         <div className='w-full text-center px-4'>
-          <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/home">Back</Link>
+          <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/home">Voltar</Link>
           {!submitted && <form className='w-full' onSubmit={addLanguage}>
               <span className='font-bold text-yellow-500 py-2 block underline text-2xl'>Add Language Form</span>
               <div className='w-full py-2'>

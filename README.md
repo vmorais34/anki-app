@@ -84,3 +84,8 @@ Exemple Response:
   "__v": 0
 
 /login - Generates a token, this token is the solicited in the function verifiyToken from the middleware; And used in Postman calls 
+
+
+-- 
+Ref card styling: https://dev.to/mematthew123/how-to-twist-cards-using-tailwind-css-23pi?context=digest
+

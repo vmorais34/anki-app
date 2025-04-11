@@ -9,42 +9,48 @@ export default function AnkiList() {
     const [languages, setLanguages] = useState(new Array());
 
     useEffect(() => {
-        fetch('http://127.0.0.1:3001/ankis', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': sessionStorage.getItem("token") || ''
-            },
-        }).then(response => response.json())
-        .then(data => {
-          setAnki(data);
-        });
+        if(anki?.length == 0){
+            fetch('http://127.0.0.1:3001/ankis', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': sessionStorage.getItem("token") || ''
+                },
+            }).then(response => response.json())
+            .then(data => {
+            setAnki(data);
+            });
+        }
     }, [anki]);
 
     useEffect(() => {
-        fetch('http://127.0.0.1:3001/users', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': sessionStorage.getItem("token") || ''
-            },
-        }).then(response => response.json())
-        .then(data => {
-            setUsers(data);
-        });
+        if(users?.length == 0){
+            fetch('http://127.0.0.1:3001/users', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': sessionStorage.getItem("token") || ''
+                },
+            }).then(response => response.json())
+            .then(data => {
+                setUsers(data);
+            });
+        }
     }, [users]);
 
     useEffect(() => {
-        fetch('http://127.0.0.1:3001/languages', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': sessionStorage.getItem("token") || ''
-            },
-        }).then(response => response.json())
-        .then(data => {
-            setLanguages(data);
-        });
+        if(languages?.length == 0){
+            fetch('http://127.0.0.1:3001/languages', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': sessionStorage.getItem("token") || ''
+                },
+            }).then(response => response.json())
+            .then(data => {
+                setLanguages(data);
+            });
+        }
     }, [languages]);
 
 
@@ -91,39 +97,41 @@ export default function AnkiList() {
 
     return (
         <>
-            <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/home">Voltar</Link>
-            <table>
-                <thead>
-                    <tr>
-                        <td className='border border-slate-300'>Name</td>
-                        <td className='border border-slate-300 text-center'>User</td>
-                        <td className='border border-slate-300 text-center'>Language</td>
-                    </tr>
-                </thead>
-
-                <tbody className="ankis" id="ankis">
-                    {!!anki && anki.map((anki: any) => (
-                        <tr key={anki._id}>
-                            <td className='border border-slate-300'>{anki.name}</td>
-                            <td className='border border-slate-300 text-center'><label>{ findUserName(anki.userId) } </label></td>
-                            <td className='border border-slate-300 text-center'><label>{ findLanguageName(anki.languageId) } </label></td>
-                            <td className='border border-slate-300 text-center'>
-                                <button onClick={(e) => deleteAnki(anki._id)} className='bg-red-500 p-2 inline-block text-white text-sm'>Delete</button></td>
-                            <td className='border border-slate-300 text-center'>
-                                <Link href={`/anki/edit/${anki._id}`} className='bg-yellow-500 p-2 inline-block ml-3 text-white text-sm'>Edit</Link>
-                            </td>
-                            <td className='border border-slate-300 text-center'>
-                                <Link className='bg-green-500 p-2 inline-block ml-3 text-white text-sm' href={`/anki/${anki._id}/create`}>Create new Anki</Link>
-                            </td>
-                            {/* <td className='border border-slate-300 text-center'>
-                                <Link className='bg-green-500 p-2 inline-block ml-3 text-white text-sm' href="/anki/upload">Upload anki</Link>
-                            </td> */}
+            <div className='w-full container mx-auto py-4 block'>
+                <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/home">Voltar</Link>
+                <table>
+                    <thead>
+                        <tr>
+                            <td className='border border-slate-300'>Name</td>
+                            <td className='border border-slate-300 text-center'>User</td>
+                            <td className='border border-slate-300 text-center'>Language</td>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
-            <div>
-                {error && <div className="p-2 text-white border-gray-200 border-[1px] rounded-sm bg-red-400" style={{ color: 'red' }}>{error}</div>}
+                    </thead>
+
+                    <tbody className="ankis" id="ankis">
+                        {!!anki && anki.map((anki: any) => (
+                            <tr key={anki._id}>
+                                <td className='border border-slate-300'>{anki.name}</td>
+                                <td className='border border-slate-300 text-center'><label>{ findUserName(anki.userId) } </label></td>
+                                <td className='border border-slate-300 text-center'><label>{ findLanguageName(anki.languageId) } </label></td>
+                                <td className='border border-slate-300 text-center'>
+                                    <button onClick={(e) => deleteAnki(anki._id)} className='bg-red-500 p-2 inline-block text-white text-sm'>Delete</button></td>
+                                <td className='border border-slate-300 text-center'>
+                                    <Link href={`/anki/edit/${anki._id}`} className='bg-yellow-500 p-2 inline-block ml-3 text-white text-sm'>Edit</Link>
+                                </td>
+                                <td className='border border-slate-300 text-center'>
+                                    <Link className='bg-green-500 p-2 inline-block ml-3 text-white text-sm' href={`/anki/${anki._id}/create`}>Create new Anki</Link>
+                                </td>
+                                {/* <td className='border border-slate-300 text-center'>
+                                    <Link className='bg-green-500 p-2 inline-block ml-3 text-white text-sm' href="/anki/upload">Upload anki</Link>
+                                </td> */}
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+                <div>
+                    {error && <div className="p-2 text-white border-gray-200 border-[1px] rounded-sm bg-red-400" style={{ color: 'red' }}>{error}</div>}
+                </div>
             </div>
         </>
     )
