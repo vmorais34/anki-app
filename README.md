@@ -29,6 +29,7 @@ FRONT-END: NextJS
   - [x] npm i cors
   - [ ] npm i path - optional
   - [ ] npm i process - to read files
+  - [ ] double check on routes of users and control of access to sensity routes
   
 
  - [x]  models, repositories, services, controllers
@@ -45,11 +46,13 @@ FRONT-END: NextJS
  - [x] Create basic front-end
  - [x] create home
  - [x] Create login
- - [ ] dark mode in navigation 
   - https://tailwindcss.com/docs/dark-mode
  - [ ] Route for user
- - [ ] Route for anki
+ - [x] Route for anki
+ - [x] Route for languague
  - [ ] Route for card
+ - [x] lib of componentes: https://headlessui.com/react/button
+ - [ ] dark mode in navigation 
 
  
 ### Fluxo correto
