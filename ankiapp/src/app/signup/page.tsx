@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Input } from '@headlessui/react'
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import Link from 'next/link';
 
 export default function Signup() {
 
@@ -47,7 +48,8 @@ export default function Signup() {
   }
 
   return (
-    <div className='w-full py-4 px-4 dark:bg-gray-900 min-h-[700px] flex items-center justify-center'>
+    <div className='w-full py-4 px-4 dark:bg-gray-900 min-h-[700px] flex justify-center flex-col'>
+        <Link className="w-full text-center my-4 font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/">Voltar</Link>
         {isOpen ? 
          <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
             <div className="fixed inset-0 flex w-screen items-center justify-center p-4">

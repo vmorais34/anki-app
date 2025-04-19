@@ -1,7 +1,20 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Home(){
+    const router = useRouter();
+
+    useEffect(() => {
+        const token = sessionStorage?.getItem("token");
+    
+        if (!token) {
+            router.push('/');
+          } else {
+            router.push('/home');
+          }
+    }, [])
 
     return (
         <>
@@ -19,9 +32,9 @@ export default function Home(){
                 <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/anki/list">List all ankis</Link>
                 <br></br><br></br>
                 <h1 className="text-2xl font-bold">Cards</h1>
-                <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/cards/create">Create new cards</Link>
+                <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/card/create">Create new cards</Link>
                 <br></br>
-                <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/cards/list">List all cards</Link>
+                <Link className="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="/card/list">List all cards</Link>
                 <br></br><br></br>
             </div>
 

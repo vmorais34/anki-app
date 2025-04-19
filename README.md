@@ -92,3 +92,7 @@ Exemple Response:
 -- 
 Ref card styling: https://dev.to/mematthew123/how-to-twist-cards-using-tailwind-css-23pi?context=digest
 
+### Alguns problemas/melhorias a fazer
+
+- qualquer usuário consegue ver os cards/ankis de outros
+- não existe um perfil em nivel admin
