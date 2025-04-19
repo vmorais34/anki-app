@@ -21,7 +21,7 @@ FRONT-END: NextJS
  - [x] initialize package.json
  - [x] connect in DB
  - [x] Login ready
- - [ ] install dependencies
+ - [x] install dependencies
   - [x] npm i express
   - [x] npm i mongoose
   - [x] npm i bcrypt
@@ -50,7 +50,7 @@ FRONT-END: NextJS
  - [ ] Route for user
  - [x] Route for anki
  - [x] Route for languague
- - [ ] Route for card
+ - [x] Route for card
  - [x] lib of componentes: https://headlessui.com/react/button
  - [ ] dark mode in navigation 
 
